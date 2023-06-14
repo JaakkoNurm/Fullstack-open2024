@@ -27,6 +27,7 @@ sequenceDiagram
     browser->>server: GET /exampleapp/data.json HTTP/1.1
     activate server
     server-->>browser: Note data
+    deactivate server
 
     Note right of browser: Data is rendered to the browser
 ```
