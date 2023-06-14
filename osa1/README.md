@@ -1,3 +1,5 @@
+
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -26,5 +28,6 @@ sequenceDiagram
     activate server
     server-->>browser: Note data
 
-    Note right of browser: Data is rendered to the 
+    Note right of browser: Data is rendered to the
+```
     
