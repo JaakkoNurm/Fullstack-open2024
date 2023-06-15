@@ -65,4 +65,21 @@ sequenceDiagram
     server-->>browser: Note data in JSON file
     deactivate server
 ```
+
+Exercise 0.6:
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note right of browser: JavaScript code rerenders notes with the new note which is sent to the server
+
+    browser->>server: POST /exampleapp/new_note_spa HTTP/1.1
+    activate server
+    server-->>browser: Status code 201 created
+    deactivate server
+
+    Note right of browser: Post request cointains the new note.  Browser doesn't refresh.
+```
+
     
