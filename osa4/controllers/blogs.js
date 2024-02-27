@@ -27,8 +27,10 @@ blogsRouter.post('/', async (request, response) => {
     }
 
     const user = await User.findById(decodedToken.id)
-    //const user = await User.findById(body.userId)
+    /* Tämä on aiemman tehtävän toteusta
+    const user = await User.findById(body.userId) */
 
+    //Huom! Myöhemmin lisätty user attribuutti aiheuttaa testin epäonnistumisen
     const blog = new Blog({
         title: body.title,
         author: body.author,
