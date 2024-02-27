@@ -1,9 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImphbW1heSIsImlkIjoiNjVkZGNhNTQwODZhNWYxOTFjNTQ2YWI2IiwiaWF0IjoxNzA5MDQxMjQ2LCJleHAiOjE3MDkwNDQ4NDZ9.swjhF-m5vsYyc94przDUHbKdrYPs5cs2le7R39Boano
 
 {
-    "title": "Taru sormusten herrasta",
-    "author": "J. R. R. Tolkien",
-    "url": "https://fi.wikipedia.org/wiki/Taru_sormusten_herrasta",
-    "likes": 1000000000
+    "title": "4h work week",
+    "author": "James May",
+    "url": "https://4hourworkweek.com",
+    "likes": 41
 }
