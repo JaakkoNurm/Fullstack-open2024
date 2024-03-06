@@ -1,0 +1,47 @@
+h2 {
+    color: burlywood;
+    font-style: italic;
+}
+
+.error {
+    color: rgb(235, 58, 58);
+    font-size: 15px;
+}
+
+.notification {
+    color: rgb(34, 171, 34);
+    font-size: 15px;
+}
+/*
+Tehtävänantoa kuvaavammat tyylit
+
+.notification {
+    width: 350px;
+    color: green;
+    background: lightgrey;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.error {
+    width: 350px;
+    color: red;
+    background: lightgrey;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+*/
+
+.container {
+    display: flex;
+    align-items: center;
+  }
