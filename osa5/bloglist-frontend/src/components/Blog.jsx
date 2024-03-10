@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types'
+
 const Blog = ({
     blog,
     addLikes,
     deleteBlog,
     user
 }) => {
-
     const handleLikes = () => {
         const blogObject = {
             ...blog,
@@ -29,6 +30,13 @@ const Blog = ({
             </div>
         </div>
     )
+}
+
+Blog.propTypes = {
+    blog: PropTypes.object.isRequired,
+    addLikes: PropTypes.func.isRequired,
+    deleteBlog: PropTypes.func.isRequired,
+    user: PropTypes.object.isRequired
 }
 
 export default Blog
