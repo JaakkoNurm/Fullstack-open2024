@@ -6,10 +6,10 @@ const Blog = ({
     deleteBlog,
     user
 }) => {
-    const handleLikes = () => {
+    const handleLikes = async () => {
         const blogObject = {
             ...blog,
-            likes: blog.likes + 1
+            likes: (blog.likes !== undefined) ? blog.likes + 1 : 1
         }
 
         addLikes(blog.id, blogObject)

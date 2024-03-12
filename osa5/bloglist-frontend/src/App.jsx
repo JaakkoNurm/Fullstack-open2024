@@ -17,7 +17,6 @@ const App = () => {
 
     useEffect(() => {
         blogService.getAll().then(blogs => {
-            blogs.sort((a, b) => b.likes - a.likes)
             setBlogs(blogs)
         })
     }, [])
@@ -87,16 +86,14 @@ const App = () => {
 
     const addLikes = async (id, blogObject) => {
         const likedBlog = await blogService.update(id, blogObject)
-        /* Voisiko uudelleen renderöinnin tehdä jotenkin hienovaraisemmin?
 
         setBlogs(
-        blogs.map(blog =>
-            blog.id === likedBlog.id
-            ? { ...blog, likes: likedBlog.likes }
-            : blog
+            blogs.map(blog =>
+                blog.id === likedBlog.id
+                    ? { ...blog, likes: likedBlog.likes }
+                    : blog
+            )
         )
-        )*/
-        window.location.reload()
     }
 
     const deleteBlog = async (id) => {
@@ -140,6 +137,7 @@ const App = () => {
             />
         )
     }
+    const sortedBlogs = blogs.sort((a, b) => b.likes - a.likes)
 
     return (
         <div>
@@ -150,7 +148,7 @@ const App = () => {
                 <Togglable>
                     <CreateForm createBlog={addBlog}/>
                 </Togglable>
-                {blogs.map(blog =>
+                {sortedBlogs.map(blog =>
                     <Blog key={blog.id}
                         blog={blog}
                         addLikes={addLikes}

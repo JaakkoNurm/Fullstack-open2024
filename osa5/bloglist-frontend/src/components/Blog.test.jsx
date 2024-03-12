@@ -12,7 +12,10 @@ test('renders blog title and author', () => {
         user: 'Test User',
         likes: 4
     }
-    const user = ''
+    const user = {
+        name: 'test',
+        username: 'test'
+    }
 
     const addLikes = () => null
     const deleteBlog = () => null
@@ -42,7 +45,10 @@ test('Event handler calls equal to times button is pressed', async () => {
         user: 'Test User',
         likes: 4
     }
-    const user = ''
+    const user = {
+        name: 'test',
+        username: 'test'
+    }
     const deleteBlog = () => null
 
     const mockLikeHandler = jest.fn()
