@@ -1,47 +1,125 @@
-h2 {
-    color: burlywood;
-    font-style: italic;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
-
-.error {
-    color: rgb(235, 58, 58);
-    font-size: 15px;
-}
-
-.notification {
-    color: rgb(34, 171, 34);
-    font-size: 15px;
-}
-/*
-Tehtävänantoa kuvaavammat tyylit
-
-.notification {
-    width: 350px;
-    color: green;
-    background: lightgrey;
-    font-size: 20px;
-    border-style: solid;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.error {
-    width: 350px;
-    color: red;
-    background: lightgrey;
-    font-size: 20px;
-    border-style: solid;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-*/
 
 .container {
-    display: flex;
-    align-items: center;
-  }
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.togglable {
+    width: 80%;
+    margin: 10px auto auto auto;
+    overflow: hidden;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+form input[type="text"], form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    box-sizing:border-box;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #333;
+}
+
+button {
+    margin-right: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #333;
+}
+
+.blog {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.blog-title {
+    color: #333;
+    font-size: 24px;
+}
+
+.blog-author {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: #666;
+    font-size: 20px;
+}
+
+.blog-likes {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: #666;
+    font-weight: 500;
+}
+
+.like-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.delete-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #af4c4c;
+}
+
+.notification {
+    color: green;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}

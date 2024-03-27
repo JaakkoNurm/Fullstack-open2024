@@ -20,13 +20,16 @@ const Blog = ({
     }
 
     return (
-        <div>
-            {blog.title} {blog.author}
+        <div className='blog'>
+            <h2 className='blog-title'>{blog.title}</h2>
+            <h3 className='blog-author'>{blog.author}</h3>
+            <div className='blog-likes'>
+                Likes: {blog.likes}
+            </div>
             <div>
-                {blog.likes}
-                <button onClick={handleLikes}>like</button>
+                <button className='like-button' onClick={handleLikes}>like</button>
                 {user && user.username === blog.user.username
-            && <button onClick={handleDelete}>delete</button>}
+            && <button className='delete-button' onClick={handleDelete}>delete</button>}
             </div>
         </div>
     )
