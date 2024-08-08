@@ -15,12 +15,14 @@ const App = () => {
     const [password, setPassword] = useState('')
     const [user, setUser] = useState(null)
 
+    //Fetch all blogs
     useEffect(() => {
         blogService.getAll().then(blogs => {
             setBlogs(blogs)
         })
     }, [])
 
+    //Check if User is logged in
     useEffect(() => {
         const loggedUserJSON = window.localStorage.getItem('loggedBlogappUser')
         if (loggedUserJSON) {
@@ -70,6 +72,17 @@ const App = () => {
     }
 
     const addBlog = (blogObject) => {
+        if (!blogObject.title || !blogObject.author || !blogObject.url) {
+            setNotification({
+                text: 'Title, author or url is missing',
+                type: 'error'
+            })
+            setTimeout(() => {
+                setNotification(null)
+            }, 5000)
+            return null
+        }
+
         blogService
             .create(blogObject)
             .then(returnedBlog => {
